@@ -10,26 +10,30 @@
         },
         version: "3.1.1",
         selector: "",
+        // 背景图列表
         imgList: ["https://ae01.alicdn.com/kf/Uc32240fb1b134adc8b256577bd78b9a3j.jpg",],
+        // banner图列表
         bannerList: ["https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg",],
     };
     xkTool.extend = xkTool.prototype.extend = function (obj) {
         for (var key in obj) {
             this[key] = obj[key]
         }
-    }
-        ;
+    };
     xkTool.extend({
+        // 范围内的随机数
         randomNum: function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min
         },
     });
     xkTool.extend({
+        // 设置字体颜色
         setColor: function (content_inner, opacity) {
             var light_bg_color = "--light_bg_color: rgb(255, 255, 255," + opacity + ");";
             var dark_bg_color = "--dark_bg_color: rgba(18,18,18," + opacity + ");";
             content_inner.setAttribute("style", light_bg_color + dark_bg_color)
         },
+        // 设置背景图
         setBg: function (img) {
             $("#web_bg").css({
                 backgroundImage: "url(" + img + ")",
@@ -37,6 +41,7 @@
                 backgroundSize: "cover",
             })
         },
+        // 设置banner
         setBanner: function (img, filter) {
             if (!filter) {
                 $(".full_page").css({
@@ -49,6 +54,7 @@
             }
         },
     });
+
     xkTool.prototype.extend({
         consoleAnchor: function () {
             $(".toc-link").click(function (e) {
@@ -56,6 +62,7 @@
             });
             return this
         },
+        // 代码全屏
         codeFull: function () {
             $(".highlight-tools").append('<i class="fas fa-fingerprint fullScreen"></i>');
             $(".highlight-tools").delegate(".fullScreen", "click", function () {
@@ -63,8 +70,7 @@
             });
             return this
         },
-    });
-    xkTool.prototype.extend({
+        // 修改banner
         changeBanner: function (imageUrl, filter = false) {
             if (imageUrl != undefined && imageUrl.search("http") != -1) {
                 xkTool.setBanner(imageUrl, filter)
@@ -75,6 +81,7 @@
             }
             return this
         },
+        // 随机banner
         randomBanner: function (startUrl, endUrl, startNum, endNum, filter = false) {
             var num;
             if ((arguments.length = 1 && startUrl == true)) {
@@ -91,6 +98,7 @@
             }
             return xkTool
         },
+        // 移动终端下的侧边栏
         mobileSidebar: function () {
             var mobile_sidebar_menus = document.getElementById("mobile-sidebar-menus");
             var menus_item_child = mobile_sidebar_menus.getElementsByClassName("menus_item_child");
@@ -101,6 +109,7 @@
             }
             return this
         },
+        // page页的背景图
         bgPage: function () {
             var web_bg = document.getElementById("web_bg");
             var content_inner = document.getElementById("content-inner");
@@ -118,6 +127,7 @@
             xkTool.setColor(content_inner, opacity);
             return this
         },
+        // 随机背景图
         randomBg: function (startUrl, endUrl, startNum, endNum) {
             var num;
             if (arguments.length < 4) {
@@ -130,13 +140,13 @@
             }
             return xkTool
         },
-    });
-    xkTool.prototype.extend({
+        // 社交标签
         appendSocial: function (obj) {
             for (var svgId in obj) {
                 $(".card-info-social-icons").append('<a class="social-icon" href="' + obj[svgId] + '" target="_blank"><svg class="icon" aria-hidden="true" style="width: 1em;height: 1em;vertical-align: -0.15em;fill: currentColor;overflow: hidden;"><use xlink:href="#' + svgId + '"></use></svg></a>')
             }
         },
+        // 离开当前页和回到当前页是 窗口的title
         cheatTitle: function (leaveTitle, backTitle, leaveIcon, backIcon) {
             var OriginTitle = document.title;
             var titleTime;
@@ -155,6 +165,7 @@
             });
             return this
         },
+        // 魔力小球
         magicCirle: function (radius, densety, color, clearOffset) {
             $(".scroll-down").after('<canvas id="canvas" width="1700px" height="470"></canvas>');
             $("");
@@ -261,8 +272,7 @@
                         ctx.closePath()
                     }
                 }
-            }
-                ;
+            };
             $(".full_page").css({
                 overflow: "hidden",
             }).circleMagic({
