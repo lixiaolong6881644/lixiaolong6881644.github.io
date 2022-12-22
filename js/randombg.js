@@ -1,7 +1,6 @@
 //随机背景图片数组,图片可以换成图床链接，注意最后一条后面不要有逗号
 var backimg = [
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/fluid_banner.png)",
-    "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/%E8%8A%88%E6%9C%88-%E7%99%BD%E6%99%B6%E6%99%B6.jpg)", // 芈月-白晶晶
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/%E5%85%AC%E5%9B%AD.png)",
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/bg14.jpg)",
     "url(https://pic.imgdb.cn/item/6108ac4d5132923bf8ca61c3.png)", //小狐狸
