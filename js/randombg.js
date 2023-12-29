@@ -3,7 +3,6 @@ var backimg = [
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/fluid_banner.png)",
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/%E5%85%AC%E5%9B%AD.png)",
     "url(https://lxiaol.oss-cn-beijing.aliyuncs.com/pictures/bg14.jpg)",
-    "url(https://pic.imgdb.cn/item/6108ac4d5132923bf8ca61c3.png)", //小狐狸
     "url(https://pic.imgdb.cn/item/6126fbbd44eaada739d33cad.jpg)", //大桥白鹤梁
     "url(https://pic.downk.cc/item/5fdab63e3ffa7d37b30d320e.png)", //宇航员
     "url(https://p6.toutiaoimg.com/img/tos-cn-i-siecs4i2o7/49741d64ee9f4d24bf4c1c2406832fa7~noop.image)", //游戏机
